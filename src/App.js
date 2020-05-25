@@ -54,7 +54,7 @@ function App() {
     let day = days[d.getDay()];
     return `${day}, ${date}  ${month}  ${" "}${year} `;
   };
-
+  console.log(weather);
   return (
     <div>
       <main>
@@ -69,7 +69,7 @@ function App() {
           />
         </div>
         <p className="date-style">{datebuilder(new Date())}</p>
-        {weather && (
+        {weather && weather.main && (
           <section>
             <p className="city-name">{weather.name}</p>
             <p className="temp">{Math.round(weather.main.temp)}°c</p>
