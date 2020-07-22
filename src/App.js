@@ -56,7 +56,15 @@ function App() {
   };
   console.log(weather);
   return (
-    <div>
+    <div
+      className={
+        weather && weather.main !== "undefined"
+          ? Math.round(weather.main.temp) > 30
+            ? "warmTheme"
+            : "defaultTheme"
+          : "defaultTheme"
+      }
+    >
       <main>
         <div className="search-box">
           <input
@@ -73,10 +81,10 @@ function App() {
           <section>
             <p className="city-name">{weather.name}</p>
             <p className="temp">{Math.round(weather.main.temp)}°c</p>
-            <p className="temp-range">
+            {/* <p className="temp-range">
               {Math.round(weather.main.temp_max)}/
               {Math.round(weather.main.temp_min)}
-            </p>
+            </p> */}
             <p className="condition">{weather.weather[0].main}</p>
           </section>
         )}

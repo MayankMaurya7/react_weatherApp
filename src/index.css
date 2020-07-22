@@ -5,8 +5,18 @@
   text-align: center;
 }
 body {
-  background-color: darkturquoise;
+  /* background-color: darkturquoise; */
   font-family: "montseratt", sans-serif;
+}
+.defaultTheme {
+  background-color: darkturquoise;
+  transition: 0.4 ease;
+  height: 100vh;
+}
+.warmTheme {
+  background-color: #f6cd8b;
+  transition: 0.4 ease;
+  height: 100vh;
 }
 
 .search-bar {
