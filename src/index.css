@@ -10,12 +10,12 @@ body {
 }
 .defaultTheme {
   background-color: darkturquoise;
-  transition: 0.4 ease;
+  transition: 0.6s ease-out;
   height: 100vh;
 }
 .warmTheme {
   background-color: #f6cd8b;
-  transition: 0.4 ease;
+  transition: 0.6s ease-out;
   height: 100vh;
 }
 
